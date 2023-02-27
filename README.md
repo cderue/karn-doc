@@ -36,6 +36,7 @@ You should be able to browse different components of the application by using th
 
 ```
 Karn Engine API : http://host.docker.internal/api/v1/engine/hc:8080/
+Karn Agent API  : http://host.docker.internal/api/v1/agent/hc:5000/
 ```
 
 >Note: If you are running this application in macOS then use `docker.for.mac.localhost` as DNS name in `.env` file and the above URLs instead of `host.docker.internal`.
