@@ -6,9 +6,23 @@
 
 KARN reference documentation.
 
-## SPA Application (Vue.js)
+## Introduction
 
-On progress...
+KARN is new a cloud-native stack that runs Business Process Management (BPM) and Robotic Process Automation (RPA) on top of Kubernetes.
+
+Combining BPM and RPA can bring numerous benefits to organizations. Some of these benefits include:
+
+- Increased Efficiency: BPM and RPA combined can automate and streamline processes, leading to improved efficiency and reduced manual effort. By automating repetitive, rule-based tasks with RPA, organizations can free up human resources to focus on more complex, value-added activities.
+
+- Improved Quality: The use of BPM and RPA can help reduce errors, improve accuracy, and enhance the overall quality of business processes. Automation can eliminate the risk of human error, and BPM can help ensure that processes are consistent and adhere to best practices.
+
+- Better Customer Experience: By automating processes with RPA, organizations can provide faster and more consistent service to customers, leading to a better overall experience.
+
+- Increased Agility: The combination of BPM and RPA can enable organizations to quickly adapt to changing business requirements and respond to market demands in a timely manner.
+
+- Enhanced Analytics: By automating processes with BPM and RPA, organizations can capture and analyze data more efficiently, providing greater insights into operational performance and enabling data-driven decision making.
+
+Overall, the combination of BPM and RPA can lead to significant cost savings, improved efficiency, and better business outcomes for organizations.
 
 ## Getting Started
 
