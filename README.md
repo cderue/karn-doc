@@ -1,5 +1,5 @@
 <a href="https://karn.io">
-   <img src="https://via.placeholder.com/150"> alt="eShop logo" title="karn" align="right" height="60" />
+   <img src="https://via.placeholder.com/150" alt="eSkarnhop logo" title="karn" align="right" height="60" />
 </a>
 
 # KARN - K(ubernetes) And R(PA) N(ext-gen)
