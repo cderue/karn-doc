@@ -30,6 +30,7 @@ Make sure you have installed [Docker](https://docs.docker.com/docker-for-windows
 
 ```powershell
 mv waypoint.docker.hcl waypoint.hcl
+waypoint init
 waypoint up
 ```
 
