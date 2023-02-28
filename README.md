@@ -26,7 +26,7 @@ Overall, the combination of BPM and RPA can lead to significant cost savings, im
 
 ## Getting Started
 
-Make sure you have installed [Docker](https://docs.docker.com/docker-for-windows/install/) and [HashiCorp Waypoint](https://developer.hashicorp.com/waypoint/tutorials/get-started-docker/get-started-docker) in your environment. After that, you can run the below commands from the **/deploy/** directory and get started with `karn` immediately.
+Make sure you have installed [Docker](https://docs.docker.com/docker-for-windows/install/) and [HashiCorp Waypoint](https://developer.hashicorp.com/waypoint/tutorials/get-started-docker/get-started-docker) in your environment. After that, enable your [local Kubernetes](https://github.com/cderue/karn-docs/wiki/Deploy-to-Local-Kubernetes) cluster and run the below commands from the **/deploy/** directory to get started with `karn` immediately.
 
 ```powershell
 mv waypoint.docker.hcl waypoint.hcl
