@@ -50,29 +50,15 @@ app "karn-engine" {
 
     build {
         use "docker-pull" {
-            image = "rabbitmq"
-            tag   = "3-management-alpine"
+            image = "karn-engine"
+            tag   = "linux-latest"
             disable_entrypoint = true
         }
     }
 
     deploy {
-        use "helm" {
+        use "docker" {
             name  = app.name
-            chart = "${path.app}/deploy/k8s/helm/rabbitmq"
-
-            set {
-                name  = "deployment.name"
-                value = "public-api"
-            }
-
-            // We use a values file so we can set the entrypoint environment
-            // variables into a rich YAML structure. This is easier than --set
-            values = [
-                file(templatefile("${path.app}/deploy/k8s/helm/inf.yaml")),
-                file(templatefile("${path.app}/deploy/k8s/helm/app.yaml")),
-                file(templatefile("%{ if var.name != "" }${var.name}%{ else }${var.name}%{ endif }"))
-            ]
         }
     }
 
@@ -99,22 +85,8 @@ app "rabbitmq" {
     }
 
     deploy {
-        use "helm" {
+        use "docker" {
             name  = app.name
-            chart = "${path.app}/deploy/k8s/helm/rabbitmq"
-
-            set {
-                name  = "deployment.name"
-                value = "public-api"
-            }
-
-            // We use a values file so we can set the entrypoint environment
-            // variables into a rich YAML structure. This is easier than --set
-            values = [
-                file(templatefile("${path.app}/deploy/k8s/helm/inf.yaml")),
-                file(templatefile("${path.app}/deploy/k8s/helm/app.yaml")),
-                file(templatefile("%{ if var.name != "" }${var.name}%{ else }${var.name}%{ endif }"))
-            ]
         }
     }
 }
