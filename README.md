@@ -52,8 +52,8 @@ waypoint up
 You should be able to browse different components of the application by using the below URLs :
 
 ```
-Karn Engine Health Check API : http://localhost/api/v1/engine/hc:8080/
-Karn Agent Health Check API  : http://localhost/api/v1/agent/hc:5000/
+Karn Engine Health Check API : http://localhost:8080/api/v1/engine/hc
+Karn Agent Health Check API  : http://localhost:5000/api/v1/agent/hc
 ```
 
 Below are the other avenues to setup *karn*.
