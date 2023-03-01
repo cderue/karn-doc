@@ -27,8 +27,8 @@ Overall, the combination of BPM and RPA can lead to significant cost savings, im
 ## Getting Started
 
 Make sure you have installed [Docker](https://docs.docker.com/docker-for-windows/install/) and enable your [local Kubernetes](https://github.com/cderue/karn-doc/wiki/Deploy-to-Local-Kubernetes) cluster.
-After that, install [HashiCorp Waypoint]([https://developer.hashicorp.com/waypoint/tutorials/get-started-docker/get-started-docker](https://developer.hashicorp.com/waypoint/tutorials/get-started-kubernetes/get-started-kubernetes)) in your Kubernetes cluster.
-When the Waypoint Server is ready, run the below commands from the **/deploy/** directory to get started with `karn` immediately.
+After that, install [HashiCorp Waypoint](https://developer.hashicorp.com/waypoint/downloads) and install the [Waypoint server](https://developer.hashicorp.com/waypoint/tutorials/get-started-kubernetes/get-started-kubernetes) in your Kubernetes cluster.
+When the Waypoint Server is ready, run the below commands from the **/deploy/getting-started** directory to get started with `KARN` immediately.
 
 ```powershell
 waypoint init
@@ -71,7 +71,7 @@ In the future, more features will be implemented in the advanced scenario.
 ### Architecture overview
 
 This reference application is cross-platform at the server and client-side, thanks to Jave and Python services capable of running on Linux containers plus any browser for the client web app.
-The architecture proposes a microservice oriented architecture implementation with multiple autonomous microservices (each one owning its own data/db) and implementing different framework within each microservice (Micronaut for Java services and FastAPI for Python services) using HTTP as the communication protocol between the client apps and the microservices and supports asynchronous communication for data updates propagation across multiple services based on Integration Events and an Event Bus (a light message broker, to choose between RabbitMQ or Azure Service Bus, underneath).
+The architecture proposes a microservice oriented architecture implementation with multiple autonomous microservices (each one owning its own data/db) and implementing different framework within each microservice (Micronaut for Java services and FastAPI for Python services) using HTTP as the communication protocol between the client apps and the microservices and supports asynchronous communication for data updates propagation across multiple services based on Integration Events and NATS.
 
 ![](img/eshop_logo.png)
 ![](img/eShopOnContainers-architecture.png)
