@@ -98,6 +98,66 @@ app "karn-engine" {
         }
     }
 }
+
+app "azurite" {
+    labels = {
+        "service" = "azurite",
+        "env"     = "local"
+    }
+
+    build {
+        use "docker-pull" {
+            image = "mcr.microsoft.com/azurestorage-azurite"
+            tag   = "latest"
+            disable_entrypoint = true
+        }
+    }
+
+    deploy {
+        use "kubernetes" {
+            pod {
+                container {
+                    port {
+                        name = "blob"
+                        port = 10000
+                    }
+                    port {
+                        name = "queue"
+                        port = 10001
+                    }
+                    port {
+                        name = "table"
+                        port = 10002
+                    }
+                }
+            }
+        }
+    }
+
+    release {
+        use "kubernetes" {
+          load_balancer = true
+          ports = [
+              {
+                        name = "blob"
+                        port = 10000
+                        target_port = 10000
+              },
+              {
+                        name = "queue"
+                        port = 10001
+                        target_port = 10001
+              },
+              {
+                        name = "table"
+                        port = 10002
+                        target_port = 10002
+              }
+
+            ]
+        }
+    }
+}
     
 app "nats" {
     labels = {
